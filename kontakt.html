@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt & Impressum – Bachata Kurs Düsseldorf</title>
+  <meta name="description" content="Kontakt zur Bachata Tanzschule Düsseldorf. Probestunde buchen, Kurs anfragen, WhatsApp. Impressum und Datenschutz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C; --gold-light: #e8c97a;
+      --dark: #0a0a0a; --dark-2: #111111; --dark-3: #1a1a1a; --dark-4: #222222;
+      --white: #f5f0ea; --muted: #888880; --accent: #8B1A2F;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--white); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 20px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; letter-spacing: 3px; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: rgba(245,240,234,0.75); text-decoration: none; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 10px 28px; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all 0.3s; }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    .page-hero { padding: 180px 60px 80px; background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 60%, #0a0a0a 100%); border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .page-hero .eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 20px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+
+    section { padding: 90px 60px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 16px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 32px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    /* CONTACT GRID */
+    .contact-section { background: var(--dark-2); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+    /* CONTACT CARDS */
+    .contact-cards { display: flex; flex-direction: column; gap: 16px; }
+    .contact-card { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.12); padding: 28px 32px; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.3s; }
+    .contact-card:hover { border-color: rgba(201,168,76,0.4); }
+    .contact-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .contact-card-content .label { font-size: 0.65rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .contact-card-content .value { font-size: 1rem; color: var(--white); }
+    .contact-card-content .value a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+    .contact-card-content .value a:hover { color: var(--gold); }
+    .contact-card-content .sub { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+
+    /* WHATSAPP CTA */
+    .whatsapp-block {
+      background: #1a2a1a; border: 1px solid rgba(37,211,102,0.2);
+      padding: 28px 32px; margin-top: 20px;
+      display: flex; gap: 20px; align-items: center;
+    }
+    .whatsapp-icon { font-size: 2rem; flex-shrink: 0; }
+    .whatsapp-text .label { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: #25d166; margin-bottom: 6px; }
+    .whatsapp-text .value { font-size: 1rem; }
+    .whatsapp-text .value a { color: var(--white); text-decoration: none; }
+    .whatsapp-text .sub { font-size: 0.82rem; color: rgba(245,240,234,0.5); margin-top: 4px; }
+
+    /* FORM */
+    .contact-form { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.12); padding: 40px 36px; }
+    .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 28px; }
+    .contact-form h3 em { font-style: italic; color: var(--gold); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2);
+      color: var(--white); padding: 14px 18px; font-family: 'Jost', sans-serif;
+      font-size: 0.92rem; font-weight: 300; outline: none; transition: border-color 0.3s;
+      appearance: none; -webkit-appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 44px; }
+    .form-group select option { background: var(--dark-3); color: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .btn-submit { width: 100%; background: var(--gold); color: var(--dark); border: none; padding: 16px; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: all 0.3s; margin-top: 8px; }
+    .btn-submit:hover { background: var(--gold-light); }
+    .form-note { font-size: 0.75rem; color: var(--muted); margin-top: 16px; line-height: 1.6; }
+
+    /* IMPRESSUM */
+    .impressum { background: var(--dark); }
+    .impressum-inner { max-width: 860px; }
+    .impressum h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; margin-bottom: 40px; }
+    .impressum h2 em { font-style: italic; color: var(--gold); }
+    .impressum-block { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .impressum-block:last-child { border-bottom: none; }
+    .impressum-block h3 { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .impressum-block p { color: rgba(245,240,234,0.7); font-size: 0.92rem; line-height: 1.9; margin-bottom: 10px; }
+    .impressum-block a { color: var(--gold); text-decoration: none; }
+
+    /* DATENSCHUTZ */
+    .datenschutz { background: var(--dark-2); }
+    .datenschutz-inner { max-width: 860px; }
+    .datenschutz h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; margin-bottom: 40px; }
+    .datenschutz h2 em { font-style: italic; color: var(--gold); }
+    .ds-block { margin-bottom: 32px; }
+    .ds-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 12px; color: var(--white); }
+    .ds-block p { color: rgba(245,240,234,0.7); font-size: 0.9rem; line-height: 1.9; margin-bottom: 10px; }
+
+    footer { background: #050505; padding: 60px; border-top: 1px solid rgba(201,168,76,0.15); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+    .footer-brand .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); letter-spacing: 3px; display: block; margin-bottom: 16px; }
+    .footer-brand p { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+    .footer-col h4 { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { color: var(--muted); font-size: 0.78rem; }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 140px 28px 60px; }
+      section { padding: 60px 28px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">BACHATA DÜSSELDORF</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="bachata-kurs-duesseldorf.html">Kurse</a></li>
+      <li><a href="bachata-party-duesseldorf.html">Partys</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt-formular" class="nav-cta">Anmelden</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow">Wir freuen uns auf dich</span>
+      <h1>Kontakt &<br><em>Impressum</em></h1>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="kontakt-formular">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="section-label">Direkt schreiben</span>
+          <h2 class="section-title">So erreichst<br>du <em>uns</em></h2>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div class="contact-card-content">
+                <div class="label">Adresse</div>
+                <div class="value">Bachata Kurs Düsseldorf<br>Musterstraße 1 · 40213 Düsseldorf</div>
+                <div class="sub">Genaue Adresse nach Anmeldung</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div class="contact-card-content">
+                <div class="label">E-Mail</div>
+                <div class="value"><a href="mailto:info@bachatakursduesseldorf.de">info@bachatakursduesseldorf.de</a></div>
+                <div class="sub">Antwort in 24h (werktags)</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📞</div>
+              <div class="contact-card-content">
+                <div class="label">Telefon</div>
+                <div class="value"><a href="tel:+491234567890">+49 123 456 7890</a></div>
+                <div class="sub">Mo–Fr 10:00–18:00 Uhr</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📸</div>
+              <div class="contact-card-content">
+                <div class="label">Instagram</div>
+                <div class="value"><a href="https://instagram.com" target="_blank">@bachatakursduesseldorf</a></div>
+                <div class="sub">Events, Termine, Impressionen</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="whatsapp-block">
+            <div class="whatsapp-icon">💬</div>
+            <div class="whatsapp-text">
+              <div class="label">WhatsApp – schnellste Antwort</div>
+              <div class="value"><a href="https://wa.me/491234567890">+49 123 456 7890 schreiben</a></div>
+              <div class="sub">Probestunde buchen, Fragen stellen – wir antworten in der Regel innerhalb 1–2 Stunden</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Probestunde oder<br><em>Kursanfrage</em></h3>
+          <form action="#" method="post" name="kontakt" netlify>
+            <input type="hidden" name="form-name" value="kontakt">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" placeholder="Dein Vorname" required>
+              </div>
+              <div class="form-group">
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" name="nachname" placeholder="Dein Nachname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse</label>
+              <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon / WhatsApp</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="+49 ...">
+            </div>
+            <div class="form-group">
+              <label for="interesse">Ich interessiere mich für</label>
+              <select id="interesse" name="interesse">
+                <option value="">– bitte wählen –</option>
+                <option value="probestunde">Kostenlose Probestunde</option>
+                <option value="anfaenger">Bachata Anfängerkurs</option>
+                <option value="aufbau">Bachata Aufbaukurs</option>
+                <option value="sensual">Bachata Sensual</option>
+                <option value="moderna">Bachata Moderna</option>
+                <option value="dominicana">Bachata Dominicana</option>
+                <option value="privat">Bachata Privatstunde</option>
+                <option value="party">Bachata Party Düsseldorf</option>
+                <option value="festival">Bachata Festival / Workshop</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="erfahrung">Deine Tanzerfahrung</label>
+              <select id="erfahrung" name="erfahrung">
+                <option value="">– bitte wählen –</option>
+                <option value="keine">Keine – noch nie getanzt</option>
+                <option value="bisschen">Ein bisschen – Grundkenntnisse</option>
+                <option value="mittel">Mittelstufe – ein Jahr oder mehr</option>
+                <option value="fort">Fortgeschritten</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nachricht">Nachricht (optional)</label>
+              <textarea id="nachricht" name="nachricht" placeholder="Fragen, Wünsche, Terminvorstellungen..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Anfrage absenden</button>
+            <p class="form-note">Mit dem Absenden stimmst du zu, dass wir deine Daten zur Bearbeitung deiner Anfrage nutzen. Kein Newsletter, kein Spam. Datenschutz: siehe unten.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section class="impressum" id="impressum">
+    <div class="container">
+      <div class="impressum-inner">
+        <h2>Impressum &<br><em>Pflichtangaben</em></h2>
+
+        <div class="impressum-block">
+          <h3>Angaben gemäß § 5 TMG</h3>
+          <p>
+            <strong>Bachata Düsseldorf / Bachata Mastery</strong><br>
+            Vorname Nachname<br>
+            Musterstraße 1<br>
+            40213 Düsseldorf<br>
+            Deutschland
+          </p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Kontakt</h3>
+          <p>
+            Telefon: <a href="tel:+491234567890">+49 123 456 7890</a><br>
+            E-Mail: <a href="mailto:info@bachatakursduesseldorf.de">info@bachatakursduesseldorf.de</a>
+          </p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Umsatzsteuer-Identifikationsnummer</h3>
+          <p>Gemäß §27a UStG: DE [DEINE USTID] (bitte ergänzen)</p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)</h3>
+          <p>Vorname Nachname · Musterstraße 1 · 40213 Düsseldorf</p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Haftungsausschluss</h3>
+          <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+          <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Urheberrecht</h3>
+          <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        </div>
+
+        <div class="impressum-block">
+          <h3>Streitschlichtung</h3>
+          <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+          <p>Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATENSCHUTZ -->
+  <section class="datenschutz" id="datenschutz">
+    <div class="container">
+      <div class="datenschutz-inner">
+        <h2>Datenschutz<em>erklärung</em></h2>
+
+        <div class="ds-block">
+          <h3>1. Datenschutz auf einen Blick</h3>
+          <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+        </div>
+
+        <div class="ds-block">
+          <h3>2. Verantwortlicher</h3>
+          <p>Verantwortlicher für die Datenverarbeitung auf dieser Website ist: Bachata Düsseldorf, Musterstraße 1, 40213 Düsseldorf. E-Mail: info@bachatakursduesseldorf.de</p>
+        </div>
+
+        <div class="ds-block">
+          <h3>3. Datenerhebung auf dieser Website</h3>
+          <p><strong>Kontaktformular:</strong> Wenn Sie uns per Formular oder E-Mail kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage und für eventuelle Anschlussfragen gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+          <p><strong>Server-Log-Dateien:</strong> Der Provider dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien. Diese Daten sind nicht bestimmten Personen zuordenbar.</p>
+        </div>
+
+        <div class="ds-block">
+          <h3>4. Google Fonts</h3>
+          <p>Diese Seite nutzt Google Fonts zur einheitlichen Darstellung von Schriftarten. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriften in Ihren Browser-Cache, um Texte und Schriftarten korrekt anzuzeigen. Dabei wird eine Verbindung zu Servern von Google hergestellt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </div>
+
+        <div class="ds-block">
+          <h3>5. YouTube-Videos</h3>
+          <p>Auf unserer Party-Seite binden wir Videos der Plattform YouTube ein. Betreiber: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Besuch der Seiten mit eingebettetem YouTube wird eine Verbindung zu den Servern von YouTube hergestellt. Datenschutzerklärung: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+        </div>
+
+        <div class="ds-block">
+          <h3>6. Ihre Rechte</h3>
+          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer gespeicherten personenbezogenen Daten. Wenden Sie sich dazu an: info@bachatakursduesseldorf.de</p>
+          <p>Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Zuständige Aufsichtsbehörde für NRW ist der Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">BACHATA DÜSSELDORF</span>
+        <p>Deine Tanzschule für Bachata Sensual, Bachata Moderna und Bachata Dominicana in Düsseldorf.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="bachata-kurs-duesseldorf.html">Bachata Kurse</a></li>
+          <li><a href="bachata-party-duesseldorf.html">Bachata Party</a></li>
+          <li><a href="kontakt.html">Kontakt & Impressum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#impressum">Impressum</a></li>
+          <li><a href="#datenschutz">Datenschutz</a></li>
+          <li><a href="mailto:info@bachatakursduesseldorf.de">E-Mail</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bachata Düsseldorf – Alle Rechte vorbehalten</p>
+      <a href="#impressum" style="color:var(--muted); text-decoration:none; font-size:0.78rem;">Impressum & Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
+</html>

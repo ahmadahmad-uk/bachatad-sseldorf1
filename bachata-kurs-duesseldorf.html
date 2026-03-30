@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bachata Kurs Düsseldorf – Anfänger bis Fortgeschrittene | Bachata Tanzschule</title>
+  <meta name="description" content="Bachata Kurs Düsseldorf: Alle Levels, alle Stile. Anfänger willkommen, kein Partner nötig. Bachata Sensual, Moderna & Dominicana. Jetzt Probestunde buchen!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C; --gold-light: #e8c97a;
+      --dark: #0a0a0a; --dark-2: #111111; --dark-3: #1a1a1a; --dark-4: #222222;
+      --white: #f5f0ea; --muted: #888880; --accent: #8B1A2F;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--white); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 20px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; letter-spacing: 3px; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: rgba(245,240,234,0.75); text-decoration: none; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 10px 28px; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 180px 60px 100px;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 60%, #0a0a0a 100%);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .page-hero .eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 20px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 300; line-height: 1.1; max-width: 700px; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero .sub { color: rgba(245,240,234,0.65); margin-top: 24px; max-width: 560px; font-size: 1.05rem; }
+
+    section { padding: 90px 60px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 16px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    /* KURS OVERVIEW */
+    .kurs-intro { background: var(--dark-2); }
+    .kurs-intro p { color: rgba(245,240,234,0.75); margin-bottom: 18px; max-width: 800px; font-size: 1.02rem; }
+
+    /* LEVEL CARDS */
+    .levels { background: var(--dark); }
+    .levels-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 48px; }
+    .level-card { background: var(--dark-3); padding: 48px 36px; border-top: 3px solid transparent; transition: all 0.4s; }
+    .level-card.gold { border-top-color: var(--gold); }
+    .level-card.red { border-top-color: var(--accent); }
+    .level-card.muted { border-top-color: rgba(136,136,128,0.4); }
+    .level-card:hover { background: var(--dark-4); transform: translateY(-4px); }
+    .level-badge { display: inline-block; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; margin-bottom: 20px; }
+    .level-badge.gold { background: rgba(201,168,76,0.15); color: var(--gold); }
+    .level-badge.red { background: rgba(139,26,47,0.2); color: #d4697e; }
+    .level-badge.muted { background: rgba(136,136,128,0.1); color: var(--muted); }
+    .level-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 16px; }
+    .level-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; }
+    .level-card ul { list-style: none; margin-top: 24px; }
+    .level-card ul li { color: rgba(245,240,234,0.65); font-size: 0.88rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 10px; }
+    .level-card ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
+
+    /* PREISE */
+    .preise { background: var(--dark-2); }
+    .preise-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .preis-card { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.1); padding: 40px 32px; text-align: center; position: relative; transition: all 0.3s; }
+    .preis-card.featured { border-color: var(--gold); }
+    .preis-card.featured::before { content: 'Beliebt'; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--dark); font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; padding: 4px 16px; }
+    .preis-card:hover { transform: translateY(-4px); }
+    .preis-name { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: block; }
+    .preis-amount { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .preis-amount span { font-size: 1.2rem; vertical-align: top; margin-top: 12px; display: inline-block; }
+    .preis-per { font-size: 0.78rem; color: var(--muted); margin-top: 8px; margin-bottom: 28px; }
+    .preis-features { list-style: none; text-align: left; margin-bottom: 32px; }
+    .preis-features li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(245,240,234,0.7); font-size: 0.88rem; display: flex; gap: 10px; align-items: flex-start; }
+    .preis-features li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 0.8rem; }
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--dark); padding: 14px 36px; font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline { display: inline-block; border: 1px solid rgba(245,240,234,0.3); color: var(--white); padding: 14px 36px; font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* FAQ */
+    .faq { background: var(--dark); }
+    .faq-list { max-width: 800px; margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .faq-q { width: 100%; background: none; border: none; color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; text-align: left; padding: 24px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .faq-q .icon { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-q.open .icon { transform: rotate(45deg); }
+    .faq-a { color: rgba(245,240,234,0.65); font-size: 0.95rem; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0; }
+    .faq-a.open { max-height: 400px; padding-bottom: 24px; }
+
+    /* INFO GRID */
+    .info-section { background: var(--dark-2); }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .info-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 20px; }
+    .info-block h3 em { font-style: italic; color: var(--gold); }
+    .info-block p { color: rgba(245,240,234,0.7); margin-bottom: 14px; }
+    .schedule-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .schedule-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .schedule-table td { padding: 12px 0; color: rgba(245,240,234,0.75); font-size: 0.88rem; }
+    .schedule-table td:first-child { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; width: 100px; }
+
+    footer { background: #050505; padding: 60px; border-top: 1px solid rgba(201,168,76,0.15); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+    .footer-brand .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); letter-spacing: 3px; display: block; margin-bottom: 16px; }
+    .footer-brand p { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+    .footer-col h4 { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { color: var(--muted); font-size: 0.78rem; }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 140px 28px 70px; }
+      section { padding: 60px 28px; }
+      .levels-grid, .preise-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">BACHATA DÜSSELDORF</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="bachata-kurs-duesseldorf.html" class="active">Kurse</a></li>
+      <li><a href="bachata-party-duesseldorf.html">Partys</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Jetzt Anmelden</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow">Tanzschule Düsseldorf</span>
+      <h1>Bachata Kurs<br><em>Düsseldorf</em></h1>
+      <p class="sub">Von Anfänger bis Fortgeschrittene – Bachata Sensual, Moderna & Dominicana. Ohne Partner. Ohne Vorkenntnisse. Einfach starten.</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="kurs-intro">
+    <div class="container">
+      <span class="section-label">Warum Bachata?</span>
+      <h2 class="section-title">Der <em>richtige Kurs</em> für dich</h2>
+      <p>Viele schreiben uns: „Ich wollte schon lange mit Bachata anfangen, aber hab mich nicht getraut." Genau für diese Menschen gibt es uns. Unser <strong>Bachata Kurs Düsseldorf</strong> ist so aufgebaut, dass Anfänger sofort Spaß haben und Fortgeschrittene weiter wachsen.</p>
+      <p>Du musst keinen Partner mitbringen. Du musst keine Tanzerfahrung haben. Wir fangen bei den Basics an – Grundschritt, Rhythmus, Verbindung – und steigern uns Woche für Woche. Die meisten Leute merken nach zwei, drei Stunden: das macht richtig Spaß.</p>
+      <p>Unser Studio ist zentral in Düsseldorf gelegen, gut erreichbar aus allen Stadtteilen – Derendorf, Flingern, Oberbilk, Bilk, Pempelfort, Altstadt und Friedrichstadt.</p>
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section class="levels">
+    <div class="container">
+      <span class="section-label">Kursstruktur</span>
+      <h2 class="section-title">Dein <em>Level</em> – dein Kurs</h2>
+      <div class="levels-grid">
+        <div class="level-card gold">
+          <span class="level-badge gold">Anfänger</span>
+          <h2>Bachata Basics</h2>
+          <p>Du hast noch nie Bachata getanzt? Perfekt. Hier beginnt alles. Wir lernen Schritt für Schritt – ohne Stress, ohne Partner, ohne Vorkenntnisse.</p>
+          <ul>
+            <li>Grundschritt & Rhythmus</li>
+            <li>Führen & Folgen lernen</li>
+            <li>Erste Drehungen & Verbindungen</li>
+            <li>Körperhaltung & Ausdruck</li>
+            <li>Regelmäßiger Partnerwechsel im Kurs</li>
+          </ul>
+        </div>
+        <div class="level-card red">
+          <span class="level-badge red">Mittelstufe</span>
+          <h2>Bachata Aufbaukurs</h2>
+          <p>Du kennst schon die Basics und willst mehr. Figuren, Stil, musikalische Interpretation – hier wird Bachata zur echten Ausdrucksform.</p>
+          <ul>
+            <li>Kombinationen & Figuren</li>
+            <li>Körperwellen & Isolation</li>
+            <li>Musikalität & Timing</li>
+            <li>Bachata Sensual Elemente</li>
+            <li>Social Dance Training</li>
+          </ul>
+        </div>
+        <div class="level-card muted">
+          <span class="level-badge muted">Fortgeschritten</span>
+          <h2>Advanced Bachata</h2>
+          <p>Für Tänzer mit solider Basis. Komplexe Choreografien, Improvisation, Stil-Differenzierung zwischen Sensual, Moderna und Dominicana.</p>
+          <ul>
+            <li>Komplexe Partnerfiguren</li>
+            <li>Improvisationstechniken</li>
+            <li>Stilvergleich der 3 Stile</li>
+            <li>Bühnen- & Auftrittsvorbereitung</li>
+            <li>Workshop-Vorbereitung für Festivals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREISE -->
+  <section class="preise">
+    <div class="container">
+      <span class="section-label">Preise & Pakete</span>
+      <h2 class="section-title">Einfach & <em>transparent</em></h2>
+      <div class="preise-grid">
+        <div class="preis-card">
+          <span class="preis-name">Schnupperstunde</span>
+          <div class="preis-amount"><span>€</span>0</div>
+          <p class="preis-per">Einmalig für Neulinge</p>
+          <ul class="preis-features">
+            <li>1 kostenlose Probestunde</li>
+            <li>Alle Levels möglich</li>
+            <li>Kein Partner nötig</li>
+            <li>Keine Verpflichtung</li>
+          </ul>
+          <a href="kontakt.html" class="btn-outline">Jetzt buchen</a>
+        </div>
+        <div class="preis-card featured">
+          <span class="preis-name">10er Karte</span>
+          <div class="preis-amount"><span>€</span>89</div>
+          <p class="preis-per">10 Stunden · flexibel einlösbar</p>
+          <ul class="preis-features">
+            <li>10 Kurseinheiten</li>
+            <li>Alle Levels & Stile</li>
+            <li>12 Monate gültig</li>
+            <li>Übertragbar auf Freunde</li>
+          </ul>
+          <a href="kontakt.html" class="btn-primary">Karte kaufen</a>
+        </div>
+        <div class="preis-card">
+          <span class="preis-name">Privatstunde</span>
+          <div class="preis-amount"><span>€</span>65</div>
+          <p class="preis-per">Pro 60 Minuten / einzeln od. zu zweit</p>
+          <ul class="preis-features">
+            <li>Individuell & intensiv</li>
+            <li>Eigenes Ziel wählen</li>
+            <li>Flexibler Termin</li>
+            <li>Hochzeit, Auftritte, Stil</li>
+          </ul>
+          <a href="kontakt.html" class="btn-outline">Termin anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO & SCHEDULE -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-block">
+          <span class="section-label">Stundenplan</span>
+          <h3>Unsere <em>Kurszeiten</em></h3>
+          <p>Aktuelle Zeiten und freie Plätze – einfach anfragen oder WhatsApp schreiben.</p>
+          <table class="schedule-table">
+            <tr><td>Montag</td><td>Bachata Anfänger – 19:00 Uhr</td></tr>
+            <tr><td>Dienstag</td><td>Bachata Sensual – 19:30 Uhr</td></tr>
+            <tr><td>Mittwoch</td><td>Bachata Aufbaukurs – 19:00 Uhr</td></tr>
+            <tr><td>Donnerstag</td><td>Bachata Moderna – 20:00 Uhr</td></tr>
+            <tr><td>Samstag</td><td>Workshop / Open Level – 15:00 Uhr</td></tr>
+          </table>
+        </div>
+        <div class="info-block">
+          <span class="section-label">Was du brauchst</span>
+          <h3>So <em>bereitest du dich vor</em></h3>
+          <p>Tanzschuhe oder bequeme Schuhe mit glattem Boden. Bitte keine Sneakers mit Profil.</p>
+          <p>Bequeme Kleidung, in der du dich frei bewegen kannst. Kein Dresscode.</p>
+          <p>Keinen Partner mitbringen nötig. Im Kurs wechseln wir regelmäßig die Tanzpartner – so lernt jeder schneller.</p>
+          <p>Einfach 10 Minuten früher kommen beim ersten Mal. Wir zeigen dir alles.</p>
+          <div style="margin-top:28px;">
+            <a href="kontakt.html" class="btn-primary">Jetzt anmelden</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <span class="section-label">Häufige Fragen</span>
+      <h2 class="section-title">Bachata Kurs Düsseldorf – <em>FAQ</em></h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Kann ich ohne Partner zum Bachata Kurs kommen?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">
+            Ja, absolut. Die meisten Teilnehmer kommen allein. Im Kurs wechseln wir regelmäßig die Tanzpartner, damit alle verschiedene Verbindungen erleben und schneller lernen. Niemand bleibt stehen.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Was ist der Unterschied zwischen Bachata Sensual und Bachata Dominicana?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">
+            Bachata Dominicana ist der traditionelle Stil aus der Dominikanischen Republik – lebhaft, rhythmisch, mit viel Fußarbeit. Bachata Sensual ist moderner und stammt aus Spanien – fließender, mit Körperwellen und engem Kontakt. Bachata Moderna verbindet beide Welten mit urbanen Elementen.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Ich habe noch nie getanzt. Bin ich zu alt oder zu ungeschickt?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">
+            Nein. Im Ernst. Unser Anfängerkurs ist für alle gemacht – egal ob 20 oder 60, schlank oder nicht. Bachata ist kein Leistungssport. Es geht um Bewegung, Rhythmus und Verbindung. Die meisten Leute, die denken, sie können nicht tanzen, sind nach zwei Stunden total begeistert.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Wie finde ich euer Studio in Düsseldorf?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">
+            Unser Studio ist zentral gelegen und gut mit U-Bahn und Bus erreichbar. Die genaue Adresse bekommst du nach der Anmeldung. Wir sind aus Derendorf, Pempelfort, Flingern, Bilk und der Altstadt gut in 15 Minuten erreichbar.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Gibt es Bachata Festivals in Düsseldorf?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">
+            Ja. Düsseldorf und das Umland (Köln, Essen, Dortmund) haben eine aktive Bachata-Szene mit regelmäßigen Festivals und Social-Nights. Als Teil unserer Community erfährst du immer als Erster von aktuellen Events.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">BACHATA DÜSSELDORF</span>
+        <p>Deine Tanzschule für Bachata Sensual, Bachata Moderna und Bachata Dominicana in Düsseldorf.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="bachata-kurs-duesseldorf.html">Bachata Kurse</a></li>
+          <li><a href="bachata-party-duesseldorf.html">Bachata Party</a></li>
+          <li><a href="kontakt.html">Kontakt & Impressum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@bachatakursduesseldorf.de">info@bachatakursduesseldorf.de</a></li>
+          <li><a href="tel:+491234567890">+49 123 456 7890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bachata Düsseldorf – Alle Rechte vorbehalten</p>
+      <a href="kontakt.html" style="color:var(--muted); text-decoration:none; font-size:0.78rem;">Impressum & Datenschutz</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      btn.classList.toggle('open');
+      const ans = btn.nextElementSibling;
+      ans.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

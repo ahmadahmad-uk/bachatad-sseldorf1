@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bachata Party Düsseldorf – Bachata Social Events & Partys NRW</title>
+  <meta name="description" content="Bachata Party Düsseldorf – Monatliche Bachata Social Events, Festivals und Partys in Düsseldorf und NRW. Für Anfänger und Fortgeschrittene. Aktuelle Termine hier!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C; --gold-light: #e8c97a;
+      --dark: #0a0a0a; --dark-2: #111111; --dark-3: #1a1a1a; --dark-4: #222222;
+      --white: #f5f0ea; --muted: #888880; --accent: #8B1A2F;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--white); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 20px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; letter-spacing: 3px; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: rgba(245,240,234,0.75); text-decoration: none; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 10px 28px; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all 0.3s; }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    .page-hero { padding: 180px 60px 100px; background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 60%, #0a0a0a 100%); border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .page-hero .eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 20px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 300; line-height: 1.1; max-width: 700px; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero .sub { color: rgba(245,240,234,0.65); margin-top: 24px; max-width: 560px; font-size: 1.05rem; }
+
+    section { padding: 90px 60px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 16px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--dark); padding: 14px 36px; font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline { display: inline-block; border: 1px solid rgba(245,240,234,0.3); color: var(--white); padding: 14px 36px; font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* INTRO */
+    .party-intro { background: var(--dark-2); }
+    .party-intro p { color: rgba(245,240,234,0.75); margin-bottom: 18px; max-width: 800px; font-size: 1.02rem; }
+
+    /* VIDEO SECTION */
+    .videos { background: var(--dark); }
+    .videos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .video-wrapper {
+      position: relative; background: var(--dark-3);
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+    }
+    .video-embed { width: 100%; aspect-ratio: 16/9; border: none; display: block; }
+    .video-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--dark-3);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; cursor: pointer;
+    }
+    .video-placeholder::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(139,26,47,0.35) 0%, transparent 70%);
+    }
+    .video-play {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: rgba(201,168,76,0.9); display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; position: relative; z-index: 1;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .video-placeholder:hover .video-play { transform: scale(1.1); background: var(--gold); }
+    .video-caption { padding: 16px 20px; font-size: 0.82rem; color: var(--muted); letter-spacing: 1px; border-top: 1px solid rgba(201,168,76,0.1); }
+
+    /* IMAGE GALLERY */
+    .gallery { background: var(--dark-2); }
+    .gallery-intro { max-width: 700px; margin-bottom: 48px; }
+    .gallery-intro p { color: rgba(245,240,234,0.7); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .gallery-item {
+      aspect-ratio: 4/3; background: var(--dark-3);
+      border: 1px solid rgba(201,168,76,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; position: relative; overflow: hidden;
+      cursor: pointer; transition: all 0.4s;
+    }
+    .gallery-item::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(139,26,47,0.2) 0%, transparent 70%);
+    }
+    .gallery-item:hover { transform: scale(1.02); border-color: rgba(201,168,76,0.4); }
+    .gallery-item .placeholder-text {
+      position: absolute; bottom: 12px; left: 12px;
+      font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); opacity: 0; transition: opacity 0.3s;
+      z-index: 1;
+    }
+    .gallery-item:hover .placeholder-text { opacity: 1; }
+
+    /* EVENTS */
+    .events { background: var(--dark); }
+    .events-list { margin-top: 48px; }
+    .event-card {
+      border: 1px solid rgba(201,168,76,0.12);
+      padding: 32px 36px; margin-bottom: 16px;
+      display: grid; grid-template-columns: 100px 1fr auto;
+      gap: 36px; align-items: center;
+      background: var(--dark-3); transition: all 0.3s;
+    }
+    .event-card:hover { border-color: rgba(201,168,76,0.4); background: var(--dark-4); }
+    .event-date { text-align: center; }
+    .event-date .day { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .event-date .month { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .event-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 8px; }
+    .event-info p { color: var(--muted); font-size: 0.88rem; }
+    .event-meta { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+    .event-tag { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; }
+    .event-tag.social { background: rgba(201,168,76,0.15); color: var(--gold); }
+    .event-tag.festival { background: rgba(139,26,47,0.2); color: #d4697e; }
+    .event-tag.workshop { background: rgba(136,136,128,0.15); color: var(--muted); }
+    .event-price { font-size: 0.88rem; color: rgba(245,240,234,0.65); margin-top: 4px; }
+
+    /* BACHATA SOCIAL EVENT */
+    .social-event { background: var(--dark-2); }
+    .social-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; margin-top: 48px; }
+    .social-text p { color: rgba(245,240,234,0.75); margin-bottom: 18px; }
+    .social-features { margin-top: 32px; list-style: none; }
+    .social-features li { padding: 12px 0; border-bottom: 1px solid rgba(201,168,76,0.1); color: rgba(245,240,234,0.7); display: flex; gap: 14px; align-items: flex-start; font-size: 0.92rem; }
+    .social-features li::before { content: '◆'; color: var(--gold); font-size: 0.45rem; margin-top: 8px; flex-shrink: 0; }
+    .social-visual { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.15); aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .social-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(139,26,47,0.4) 0%, transparent 70%); }
+
+    /* FESTIVAL */
+    .festival { background: var(--accent); padding: 80px 60px; text-align: center; }
+    .festival-inner { max-width: 800px; margin: 0 auto; }
+    .festival span { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: rgba(245,240,234,0.6); display: block; margin-bottom: 20px; }
+    .festival h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+    .festival p { color: rgba(245,240,234,0.75); max-width: 620px; margin: 0 auto 36px; }
+
+    footer { background: #050505; padding: 60px; border-top: 1px solid rgba(201,168,76,0.15); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+    .footer-brand .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); letter-spacing: 3px; display: block; margin-bottom: 16px; }
+    .footer-brand p { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+    .footer-col h4 { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { color: var(--muted); font-size: 0.78rem; }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 140px 28px 70px; }
+      section { padding: 60px 28px; }
+      .videos-grid, .social-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .event-card { grid-template-columns: 60px 1fr; }
+      .event-meta { display: none; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .festival { padding: 60px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">BACHATA DÜSSELDORF</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="bachata-kurs-duesseldorf.html">Kurse</a></li>
+      <li><a href="bachata-party-duesseldorf.html" class="active">Partys</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Jetzt Anmelden</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow">Social Dancing</span>
+      <h1>Bachata Party<br><em>Düsseldorf</em></h1>
+      <p class="sub">Monatliche Bachata Social Events in Düsseldorf. Für alle Levels. 100% Bachata Musik. Tanzfläche statt Sitzbereich.</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="party-intro">
+    <div class="container">
+      <span class="section-label">Über unsere Partys</span>
+      <h2 class="section-title">Das Beste am Tanzen –<br><em>Social Dancing</em></h2>
+      <p>Theorie ist gut. Tanzen ist besser. Die <strong>Bachata Party Düsseldorf</strong> ist der Ort, wo du alles ausprobierst, was du im Kurs gelernt hast. Kein Wettbewerb, keine Wertung – nur Musik, Bewegung und echte Begegnungen auf der Tanzfläche.</p>
+      <p>Unsere monatlichen Bachata Social Events in Düsseldorf sind offen für alle – Anfänger und Profis tanzen Seite an Seite. Die erfahrenen Tänzer freuen sich über neue Gesichter und helfen gerne. So ist das in der Bachata-Community.</p>
+      <p>Die Location wechselt manchmal – mal in der Düsseldorfer Altstadt, mal in Oberbilk oder Friedrichstadt. Aktuelle Termine und Locations findest du unten oder auf unserem Instagram.</p>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videos">
+    <div class="container">
+      <span class="section-label">Stimmung einfangen</span>
+      <h2 class="section-title">Schau rein – <em>so klingt Bachata</em></h2>
+      <div class="videos-grid">
+
+        <!-- Video 1: Ersetze DEINE_VIDEO_ID mit der YouTube-Video-ID -->
+        <div class="video-wrapper">
+          <iframe class="video-embed"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Bachata Party Düsseldorf – Social Dancing"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="video-caption">Bachata Social Night – Impressionen vom Abend</div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-wrapper">
+          <iframe class="video-embed"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Bachata Sensual Düsseldorf – Tanzvorführung"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="video-caption">Bachata Sensual – Demo unserer Lehrer</div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-wrapper">
+          <iframe class="video-embed"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Bachata Festival NRW Highlights"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="video-caption">Bachata Festival NRW – Highlights</div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-wrapper">
+          <iframe class="video-embed"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Bachata Dominicana – Tanzstil Erklärung"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="video-caption">Bachata Dominicana – der Ursprungsstil</div>
+        </div>
+
+      </div>
+      <p style="color:var(--muted); font-size:0.82rem; margin-top:20px; text-align:center;">
+        ↑ YouTube-IDs können direkt in den src-Links der iframes ersetzt werden (z.B. durch eigene Videos oder Bachata-Content)
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="container">
+      <span class="section-label">Atmosphäre</span>
+      <h2 class="section-title">Bilder der <em>Nacht</em></h2>
+      <div class="gallery-intro">
+        <p>Eigene Fotos von deinen Events können hier einfach als &lt;img&gt;-Tags eingefügt werden. Die Raster-Struktur bleibt erhalten. Jedes Bild: 4:3 Format, mind. 800px breit.</p>
+      </div>
+      <div class="gallery-grid">
+        <!-- Ersetze die Platzhalter mit: <img src="dein-foto.jpg" alt="Bachata Party Düsseldorf" style="width:100%;height:100%;object-fit:cover;"> -->
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+        <div class="gallery-item"><span style="position:relative;z-index:1;">📸</span><span class="placeholder-text">Foto einfügen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS LIST -->
+  <section class="events">
+    <div class="container">
+      <span class="section-label">Kalender</span>
+      <h2 class="section-title">Nächste <em>Events</em> in Düsseldorf</h2>
+      <div class="events-list">
+
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">12</div>
+            <div class="month">Apr</div>
+          </div>
+          <div class="event-info">
+            <h3>Bachata Social Night Düsseldorf</h3>
+            <p>Altstadt · 21:00 – 02:00 Uhr · DJ Manny · Bachata, Merengue</p>
+          </div>
+          <div class="event-meta">
+            <span class="event-tag social">Social Event</span>
+            <span class="event-price">€ 8 Eintritt</span>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">19</div>
+            <div class="month">Apr</div>
+          </div>
+          <div class="event-info">
+            <h3>Bachata Workshop – Sensual Level 2</h3>
+            <p>Tanzstudio Mitte · 15:00 – 18:00 Uhr · Gastlehrer aus Madrid</p>
+          </div>
+          <div class="event-meta">
+            <span class="event-tag workshop">Workshop</span>
+            <span class="event-price">€ 35 / Person</span>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">03</div>
+            <div class="month">Mai</div>
+          </div>
+          <div class="event-info">
+            <h3>Bachata Party Düsseldorf – Monatsevent</h3>
+            <p>Friedrichstadt · 21:30 – 03:00 Uhr · 100% Bachata · Alle Levels</p>
+          </div>
+          <div class="event-meta">
+            <span class="event-tag social">Social Event</span>
+            <span class="event-price">€ 10 Eintritt</span>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">17</div>
+            <div class="month">Mai</div>
+          </div>
+          <div class="event-info">
+            <h3>NRW Bachata Festival – Düsseldorf</h3>
+            <p>Großraumdisco Oberbilk · Freitag bis Sonntag · 3 Floors · 15+ Lehrer</p>
+          </div>
+          <div class="event-meta">
+            <span class="event-tag festival">Festival</span>
+            <span class="event-price">Tagespass ab € 25</span>
+          </div>
+        </div>
+
+      </div>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:28px;">Aktuelle Änderungen immer auf Instagram & WhatsApp – am besten dort folgen!</p>
+    </div>
+  </section>
+
+  <!-- BACHATA SOCIAL EVENT INFO -->
+  <section class="social-event">
+    <div class="container">
+      <div class="social-grid">
+        <div class="social-text">
+          <span class="section-label">Was dich erwartet</span>
+          <h2 class="section-title">Bachata Social Event <em>Düsseldorf</em></h2>
+          <p>Eine gute Bachata Party ist keine normale Disco. Die Tanzfläche steht im Mittelpunkt. Die Musik ist handverlesen – Bachata Sensual, Bachata Moderna, manchmal traditionelle Dominicana-Tracks.</p>
+          <p>Du kannst jeden fragen. Jeder tanzt mit jedem. Das ist die Kultur. Kein Korb – niemand lehnt hier einen Tanz ab ohne guten Grund. So funktioniert Social Dancing weltweit.</p>
+          <ul class="social-features">
+            <li>100% Bachata Musik – curated by local DJs</li>
+            <li>Anfänger und Profis auf einer Tanzfläche</li>
+            <li>Kein Alkoholdruck – Wasser, Softdrinks, Cocktails</li>
+            <li>Professionelle Lautstärke – man kann sich noch unterhalten</li>
+            <li>Keine Handyfilme auf der Tanzfläche – Respekt & Atmosphäre</li>
+            <li>Oft mit kleiner Showcase-Show zu Beginn</li>
+          </ul>
+        </div>
+        <div class="social-visual">
+          <span style="font-size:7rem; position:relative; z-index:1;">🕺</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FESTIVAL BANNER -->
+  <div class="festival">
+    <div class="festival-inner">
+      <span>Großevent</span>
+      <h2>Bachata Festival Düsseldorf</h2>
+      <p>Einmal im Jahr wird Düsseldorf zur Hauptstadt der Bachata in NRW. Internationale Künstler, Workshops, Shows und drei Nächte Bachata non-stop. Als Teil unserer Community bist du immer zuerst informiert.</p>
+      <a href="kontakt.html" class="btn-primary" style="background:var(--white); color:var(--accent);">Newsletter anmelden</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">BACHATA DÜSSELDORF</span>
+        <p>Deine Tanzschule für Bachata Sensual, Bachata Moderna und Bachata Dominicana in Düsseldorf.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="bachata-kurs-duesseldorf.html">Bachata Kurse</a></li>
+          <li><a href="bachata-party-duesseldorf.html">Bachata Party</a></li>
+          <li><a href="kontakt.html">Kontakt & Impressum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@bachatakursduesseldorf.de">info@bachatakursduesseldorf.de</a></li>
+          <li><a href="tel:+491234567890">+49 123 456 7890</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bachata Düsseldorf – Alle Rechte vorbehalten</p>
+      <a href="kontakt.html" style="color:var(--muted); text-decoration:none; font-size:0.78rem;">Impressum & Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
+</html>
